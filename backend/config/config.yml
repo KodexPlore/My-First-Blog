@@ -1,0 +1,12 @@
+app:
+  name: FirstGoApp
+  port: 3000
+
+database:
+  host: localhost
+  port: 3306
+  user: root
+  password: 1234
+  name: test01
+  maxidleconns: 10
+  maxopenconns: 100
