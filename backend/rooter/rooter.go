@@ -25,5 +25,14 @@ func SetupRooter() *gin.Engine {
 		// article.DELETE("/:id", controllers.DeleteArticle)
 	}
 
+	comment := r.Group("/api/comment")
+	comment.Use(middlewares.AuthMiddleware())
+	{
+		comment.GET("/:article_id", controllers.GetComments)
+		comment.POST("/", controllers.CreateComment)
+		// comment.PUT("/:id", controllers.UpdateComment)
+		// comment.DELETE("/:id", controllers.DeleteComment)
+	}
+
 	return r
 }
