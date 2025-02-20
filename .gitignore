@@ -21,5 +21,9 @@
 go.work
 go.work.sum
 
+# IDE files
+.vscode/
+.idea/
+
 # env file
 .env
